@@ -12,7 +12,7 @@ def inicializacao():
     if not 'modelo' in st.session_state:
         st.session_state.modelo = 'gpt-4o-mini'
     if not 'api_key' in st.session_state:
-        st.session_state.api_key = le_chave()
+        st.session_state.api_key = ''
     if not 'temperatura' in st.session_state:
         st.session_state.temperatura = 0.3
 
