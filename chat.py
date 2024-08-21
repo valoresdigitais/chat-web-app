@@ -34,7 +34,7 @@ def filter_conversations(search_term):
 
 # TABS ==================================================
 def tab_conversas(tab):
-
+    st.logo("https://i.imgur.com/vGRqdin.png")
     tab.button('➕ Nova conversa',
                 on_click=create_new_conversation,
                 use_container_width=True)
