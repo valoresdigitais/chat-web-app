@@ -35,13 +35,14 @@ def filter_conversations(search_term):
 # TABS ==================================================
 def tab_conversas(tab):
     st.logo("https://i.imgur.com/vGRqdin.png")
+
+    search_term = tab.text_input("Buscar conversas", key="search_conversations")
+    
+    filtered_conversations = filter_conversations(search_term)
     tab.button('➕ Nova conversa',
                 on_click=create_new_conversation,
                 use_container_width=True)
     tab.markdown('')
-    
-    search_term = tab.text_input("Buscar conversas", key="search_conversations")
-    filtered_conversations = filter_conversations(search_term)
     
     for conv_id, messages in filtered_conversations.items():
         if messages:
